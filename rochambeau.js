@@ -7,6 +7,7 @@ var score = [0,0,0];
 var playerChoice;
 var computerChoice;
 
+// Here is a test comment
 function playGame(){
     // Here is the game ruleset algorithm
     if (playerChoice == computerChoice) {
