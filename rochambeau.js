@@ -26,6 +26,35 @@ function playGame(){
         // Scissors beats paper - a win!
         console.log("win");
         return 1;
+    } else if (playerChoice == 3 && computerChoice == 0) {
+        // Spock vaporizes rock - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 3 && computerChoice == 2) {
+        // Spock smashes scissors - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 4 && computerChoice == 3) {
+        // Lizard poisons spock - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 4 && computerChoice == 1) {
+        // Lizard eats paper - a win!
+        console.log("win");
+        return 1 ;
+    } else if (playerChoice == 2 && computerChoice == 3) {
+        // Paper disproves spock - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 0 && computerChoice == 4) {
+        //Rock crushes lizard - a win!
+        conole.log("win");
+        return 1;
+    } else if (playerChoice == 2 && computerChoice == 4) {
+        // Scissors decipate lizard - a win!
+        console.log("win");
+        return 1;
+    }
     } else {
         // All other combinations are losses
         console.log("lose");
