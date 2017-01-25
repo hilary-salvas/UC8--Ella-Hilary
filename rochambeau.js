@@ -26,6 +26,34 @@ function playGame(){
         // Scissors beats paper - a win!
         console.log("win");
         return 1;
+    } else if (playerChoice == 3 && computerChoice == 0) {
+        // Spock vaporizes rock - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 3 && computerChoice == 2) {
+        // Spock smashes scissors - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 4 && computerChoice == 3) {
+        // Lizard poisons spock - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 4 && computerChoice == 1) {
+        // Lizard eats paper - a win!
+        console.log("win");
+        return 1 ;
+    } else if (playerChoice == 2 && computerChoice == 3) {
+        // Paper disproves spock - a win!
+        console.log("win");
+        return 1;
+    } else if (playerChoice == 0 && computerChoice == 4) {
+        //Rock crushes lizard - a win!
+        conole.log("win");
+        return 1;
+    } else if (playerChoice == 2 && computerChoice == 4) {
+        // Scissors decipate lizard - a win!
+        console.log("win");
+        return 1;
     } else {
         // All other combinations are losses
         console.log("lose");
@@ -45,8 +73,8 @@ function updateScore(val){
 }
 
 function displayGameResult(resultId){
-    // Define an array of text labels for the choices 0, 1, 2;
-    var choices = ["Rock", "Paper", "Scissors"];
+    // Define an array of text labels for the choices 0, 1, 2, 3 and 4;
+    var choices = ["Rock", "Paper", "Scissors", "Spock", "Lizard"];
     // Now play the game and store the result
     var result = playGame();
     // Create a message for the player
@@ -78,6 +106,7 @@ function storePlayerChoice(choice) {
 
 function storeComputerChoice() {
     // Generate computer's random choice
-    computerChoice = Math.floor(Math.random()*3);
+    computerChoice = Math.floor(Math.random()*5);
     console.log("Computer choice = " + computerChoice);
 }
+// comment
