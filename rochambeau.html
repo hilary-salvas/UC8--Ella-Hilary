@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,18 +25,34 @@
                         <button type="button" class="btn btn-default" onclick="storePlayerChoice(4)">Lizard</button>
                     </div>
         <p></p>
-        <input type="button" onclick="displayGameResult('result'), displayScoreBoard('wins', 'losses', 'ties')" value="Play" class="btn btn-primary">
+        <input type="button" onclick="displayGameResult('result'), displayScoreBoard('wins', 'losses', 'ties', 'matchwins', 'matchlosses')" value="Play" class="btn btn-primary">
         <p></p>
         <div id="result"></div>
         <div id="scoreboard">
             <table class="table">
             <tr>
+<<<<<<< HEAD
                 <td id="wins">Matches Won</td><td id="losses">Matches Lost</td>
                 </tr>
                 <tr>
                 <td id="numberwins"</td>
                 </tr>
             </table>
+=======
+                <td>Wins:</td><td>Losses:</td><td>Ties:</td>
+            </tr>
+            <tr>
+                <td id="wins">0</td><td id="losses">0</td><td id="ties">0</td>
+            </tr>
+            <tr>
+                <td>Match Wins:</td><td>Match Losses:</td>
+            </tr>
+            <tr>
+                <td id="matchwins">0</td>
+                <td id="matchlosses">0</td>
+            </tr>
+        </table>
+>>>>>>> origin/master
         </div>
     </div>
 </body>

@@ -1,7 +1,7 @@
 // This is the varaible that stores the score.
 // score[0] = wins, score[1] = ties, score[2] = losses
 var score = [0,0,0];
-
+var matches = [0,0];
 // The variables store the current player's and computer's choices
 // 0 = Rock, 1 = Paper, 2 = Scissors
 var playerChoice;
@@ -61,15 +61,29 @@ function playGame(){
     }
 }
 
-function displayScoreBoard(winsId, lossesId, tiesId){
+function displayScoreBoard(winsId, lossesId, tiesId, matchwinsId, matchlossesId){
     document.getElementById(winsId).innerHTML = score[0];
     document.getElementById(lossesId).innerHTML = score[2];
     document.getElementById(tiesId).innerHTML = score[1];
+    document.getElementById(matchwinsId).innerHTML = matches[0];
+    document.getElementById(matchlossesId).innerHTML = matches[1];
 }
 
 function updateScore(val){
     ++score[val];
+    updatematches();
     console.log("The score is now " + score);
+}
+
+function updatematches(val) {
+    if (score[0] == 2) {
+        ++matches[0];
+        score = [0, 0, 0];
+    }
+    else if (score[2] == 2) {
+        ++matches[1];
+        score = [0, 0, 0];
+    }
 }
 
 function displayGameResult(resultId){
